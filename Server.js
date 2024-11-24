@@ -113,6 +113,11 @@ const ecostatschema = new mongoose.Schema({
 const Delivery = mongoose.model('Delivery',deliverySchema);
 module.exports = Delivery;
 
+
+app.get('/',async (req,res) => {
+    return res.json("Hello");
+});
+
 //api to register user to db
 app.post('/register', async (req, res) => {
     const { username, password, weight, latitude, longitude } = req.body;
